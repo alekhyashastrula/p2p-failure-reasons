@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Potential Failure Reasons</title>
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --card: #141821;
+      --card-border: #232a37;
+      --text: #e7ebf2;
+      --muted: #9aa4b5;
+      --accent: #5b7cfa;
+      --accent-soft: rgba(91, 124, 250, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding: 48px 20px;
+    }
+
+    .wrap { max-width: 760px; margin: 0 auto; }
+
+    header { margin-bottom: 40px; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .intro { color: var(--muted); font-size: 17px; }
+
+    .reasons { display: grid; gap: 16px; margin: 36px 0; }
+
+    .reason {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .reason:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    .reason h2 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .reason .num {
+      flex: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+
+    .reason p { color: var(--muted); font-size: 15px; }
+
+    .note {
+      border-left: 3px solid var(--accent);
+      background: var(--accent-soft);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 32px 0;
+      font-size: 15px;
+    }
+
+    .support {
+      text-align: center;
+      border-top: 1px solid var(--card-border);
+      padding-top: 32px;
+      margin-top: 40px;
+    }
+
+    .support h2 { font-size: 20px; margin-bottom: 8px; }
+    .support p { color: var(--muted); margin-bottom: 16px; }
+
+    .support a {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 22px;
+      border-radius: 10px;
+      transition: opacity 0.2s ease;
+    }
+
+    .support a:hover { opacity: 0.88; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 28px; }
+      body { padding: 32px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="eyebrow">Troubleshooting</span>
+      <h1>Why did my verification fail?</h1>
+      <p class="intro">
+        We understand it can be frustrating when things don't work as expected.
+        If you're experiencing an issue, it might be due to one of the common reasons listed below.
+      </p>
+    </header>
+
+    <section class="reasons">
+      <div class="reason">
+        <h2><span class="num">1</span> Verification Requirements Not Met ✅</h2>
+        <p>
+          For security and accuracy, some apps require a verification requirements step. If your
+          information doesn't meet the required criteria, then you will not be eligible and the
+          verification process cannot continue and will be halted.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h2><span class="num">2</span> Low Memory (RAM) Availability 🧠</h2>
+        <p>
+          Your device needs a certain amount of available memory, or RAM, to run processes smoothly.
+          If other applications are using too much memory, there might not be enough for our service
+          to function correctly, which can cause it to fail.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h2><span class="num">3</span> Limited CPU Power 💻</h2>
+        <p>
+          The CPU (Central Processing Unit) is your device's brain. If it's not powerful enough or is
+          busy with other tasks, it may struggle to keep up with the demands of the process, leading
+          to a timeout or an error.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h2><span class="num">4</span> Slow or Unstable Network 🌐</h2>
+        <p>
+          A stable and reasonably fast internet connection is essential. If your network is slow,
+          drops frequently, or is unreliable, the communication with our servers can be interrupted,
+          causing the process to fail.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h2><span class="num">5</span> Outdated Operating System</h2>
+        <p>
+          Using an outdated operating system (OS) can lead to compatibility issues. Our services are
+          designed for modern systems, and older versions of Windows, macOS, Android, or iOS may lack
+          the necessary features or security protocols to work properly.
+        </p>
+      </div>
+    </section>
+
+    <div class="note">
+      <strong>Note:</strong> Sometimes failure could be because of temporary network issues, so you
+      should please try verification again. If the problem persists, contact support with your Session ID.
+    </div>
+
+    <section class="support">
+      <h2>Still need help?</h2>
+      <p>Reach out to our P2P support team and we'll get you sorted.</p>
+      <a href="mailto:zonaveenp2p.me@gmail.com">zonaveenp2p.me@gmail.com</a>
+    </section>
+
+    <footer>
+      Reclaim Protocol &middot; Potential Failure Reasons
+    </footer>
+  </div>
+</body>
+</html>
